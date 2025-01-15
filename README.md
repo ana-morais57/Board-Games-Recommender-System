@@ -8,7 +8,7 @@ This repository contains a comprehensive project for a basic board game recommen
 1. [Overview](#-overview)
 2. [Project Files](#-project-files)
 3. [Requirements](#-requirements)
-4. [Setup Instructions](#-setup-instructions)
+4. [Setup Instructions](#--setup-instructions)
 5. [Usage](#-usage)
 6. [Conclusions](#-conclusions)
 
