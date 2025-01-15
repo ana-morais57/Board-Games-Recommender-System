@@ -1,9 +1,9 @@
-# Board-Games-Recommender-System
+# ♟️🎲 Board-Games-Recommender-System 🀄🧩
 This repository contains a comprehensive project for a basic board game recommendation system using machine learning clustering techniques. The system leverages the [BoardGameGeek database](https://www.kaggle.com/datasets/seanthemalloy/board-game-geek-database) to recommend similar games based on user selection.
 
 ---
 
-## Table of Contents
+## 📑 Table of Contents
 
 1. [Overview](#overview)
 2. [Project Files](#project-files)
@@ -14,13 +14,19 @@ This repository contains a comprehensive project for a basic board game recommen
 
 ---
 
-## Overview
+## 📜 Overview
 
-This project implements a clustering-based recommender system for board games. Users can select a board game and receive recommendations based on similar game attributes such as ratings, game complexity, playtime, game cathegories and mechanics. The application is built using Python and Streamlit.
+This project implements a clustering-based recommender system for board games. Users can select a board game and receive recommendations based on similar game attributes such as:
+- ⭐ Ratings
+- 🎛 Game complexity
+- ⏳ Playtime
+- 🗂 Game categories and mechanics
+
+The application is built using **Python** and **Streamlit** for an interactive user experience.
 
 ---
 
-## Project Files
+## 📂 Project Files
 
 This repository contains the following files:
 
@@ -32,25 +38,25 @@ This repository contains the following files:
   
 ---
 
-## Requirements
+## ⚙ Requirements
 
 To run this project, ensure you have the following installed:
 
-- Python 3.8 or above
-- pip (Python package installer)
+- 🐍 Python 3.8 or above
+- 📦 pip (Python package installer)
 
 You can find the specific dependencies in the `requirements.txt` file.
 
 ---
 
-## Setup Instructions
+## 🛠️ Setup Instructions
 
-1. **Clone the Repository**:
+1. © **Clone the Repository**:
    ```bash
    git clone <repository-url>
    cd <repository-directory>
 
-2. **Create and Activate a Virtual Environment**:
+2. 🌐 **Create and Activate a Virtual Environment**:
    It is recommended to use a virtual environment to manage dependencies and avoid conflicts with other Python projects on your system.
 
    - Create a virtual environment:
@@ -67,31 +73,31 @@ You can find the specific dependencies in the `requirements.txt` file.
        source env/bin/activate
        ```
        
-3. **Install Dependencies**:
+3. 📦 **Install Dependencies**:
    Use pip to install the required Python packages:
    ```bash
    pip install -r requirements.txt
 
-4. **Prepare the Dataset**:
+4. 🗂️ **Prepare the Dataset**:
    - Ensure the dataset (`boardgamesdf.csv`) is located in the same directory as `app.py`.
    - If the dataset is in a different location, update the path in `app.py` to reflect its location:
      ```python
      df = pd.read_csv("<path-to-your-dataset>/boardgamesdf.csv")
      ```
 
-5. **Run the Application**:
+5. ⚡ **Run the Application**:
    Launch the Streamlit app using the following command:
    ```bash
    streamlit run app.py
 
-6. **Deactivate the Virtual Environment**:
+6. 🛑 **Deactivate the Virtual Environment**:
    If you no longer need the virtual environment, deactivate it by running:
    ```bash
    deactivate
    
 ---
 
-## Usage
+## 🚀 Usage
 
 1. **Launch the App**:
    Follow the setup instructions to start the Streamlit application.
@@ -105,11 +111,11 @@ You can find the specific dependencies in the `requirements.txt` file.
      
 ---
 
-## Conclusions
+## 🎯 Conclusions
 
 1. **Feature Selection**:
-   - **Numerical Features**: The final dataset for this project included 6 numerical features: `game weight` (representing the complexity of the game, on a scale from 1 to 5), `min players`, `max players`, `playtime`, `age recommendation`, and `number of expansions`. These were log-transformed, robust-scaled, and min-max scaled to ensure consistency and compatibility with the clustering algorithm.
-   - **Categorical Features**: The dataset also included 360 categorical features derived from `game categories`, `game subcategories`, `game mechanics`, and `game themes`. These features were already encoded prior to preprocessing.
+   - 🧮 **Numerical Features**: The final dataset for this project included 6 numerical features: `game weight` (representing the complexity of the game, on a scale from 1 to 5), `min players`, `max players`, `playtime`, `age recommendation`, and `number of expansions`. These were log-transformed, robust-scaled, and min-max scaled to ensure consistency and compatibility with the clustering algorithm.
+   - 📂 **Categorical Features**: The dataset also included 360 categorical features derived from `game categories`, `game subcategories`, `game mechanics`, and `game themes`. These features were already encoded prior to preprocessing.
    - A mixed features matrix was constructed, combining these scaled numerical features and encoded categorical data, ensuring all data was normalized between 0 and 1 for optimal clustering performance.
   
 2. **Clustering Effectiveness**:
