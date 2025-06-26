@@ -35,6 +35,7 @@ This repository contains the following files:
 - **`ML and Board Games.pdf`**: A presentation detailing the project objectives, implementation, and conclusions.
 - **`MLClusteringBG.ipynb`**: The Jupyter Notebook containing detailed steps for data cleaning, exploratory data analysis, data preprocessing, data modeling and clustering analysis for the recommender system.
 - **`boardgamesdf.csv`**: A preprocessed dataset containing information about board games, including their names, ratings, weights, min/max number of players, and other features. This dataset is generated as the output of the `MLClusteringBG.ipynb` notebook and serves as the primary data source for the recommender system.
+- **`cluster_models.py`**: Utility script that computes additional clustering labels (Agglomerative and HDBSCAN) and prints clustering metrics.
   
 ---
 
@@ -44,6 +45,7 @@ To run this project, ensure you have the following installed:
 
 - 🐍 Python 3.8 or above
 - 📦 pip (Python package installer)
+- 🔍 `hdbscan` library for advanced clustering (included in `requirements.txt`)
 
 You can find the specific dependencies in the `requirements.txt` file.
 
@@ -90,7 +92,14 @@ You can find the specific dependencies in the `requirements.txt` file.
    ```bash
    streamlit run app.py
 
-6. 🛑 **Deactivate the Virtual Environment**:
+6. *(Optional)* **Precompute Clusters**:
+   If you want to save cluster labels to a new CSV file before running the app,
+   execute `cluster_models.py`:
+   ```bash
+   python cluster_models.py
+   ```
+
+7. 🛑 **Deactivate the Virtual Environment**:
    If you no longer need the virtual environment, deactivate it by running:
    ```bash
    deactivate
@@ -102,10 +111,14 @@ You can find the specific dependencies in the `requirements.txt` file.
 1. **Launch the App**:
    Follow the setup instructions to start the Streamlit application.
 
-2. **Select a Board Game**:
+2. **Choose a Clustering Method**:
+   - Use the dropdown in the sidebar to select **KMeans**, **Agglomerative**, or **HDBSCAN**.
+   - The method with the highest silhouette score is pre-selected automatically.
+
+3. **Select a Board Game**:
    - Use the dropdown menu in the app to choose a board game.
 
-3. **View Recommendations**:
+4. **View Recommendations**:
    - The application displays the top 10 rated games similar to your selection.
    - Recommendations are based on clustering analysis of game features.
      
