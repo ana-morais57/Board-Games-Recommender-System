@@ -45,7 +45,6 @@ To run this project, ensure you have the following installed:
 
 - 🐍 Python 3.8 or above
 - 📦 pip (Python package installer)
-- 🔍 `hdbscan` library for advanced clustering (included in `requirements.txt`)
 
 You can find the specific dependencies in the `requirements.txt` file.
 
